@@ -1,0 +1,120 @@
+:root {
+    --bg-color: #1e1e24;
+    --card-bg: #2a2a35;
+    --accent-color: #4caf50;
+    --text-color: #ffffff;
+    --btn-hover: #45a049;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* Custom lại viền bàn cờ cho đẹp */
+#myBoard {
+    border: 4px solid #3d3d4d;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.controls {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.controls h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #3d3d4d;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.status-box {
+    background: #1e1e24;
+    padding: 10px 15px;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.setting-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    background: #1e1e24;
+    color: white;
+    border: 1px solid #3d3d4d;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.hint-btn {
+    background-color: #ff9800; /* Màu cam nổi bật cho nút Hint */
+}
+
+.hint-btn:hover {
+    background-color: #e68a00;
+}
+
+/* Hiệu ứng đổ màu vàng lên ô cờ khi nhận được gợi ý */
+.highlight-hint {
+    box-shadow: inset 0 0 3px 3px yellow;
+    background-color: rgba(255, 255, 0, 0.4) !important;
+  }
