@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quzxyz Chess Bot vs Stockfish</title>
-    <!-- Thư viện giao diện bàn cờ -->
+    <title>Quzxyz Chess Bot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>Chơi Cờ Vua Với Stockfish</h1>
+        <h1>Chơi Cờ Vua Với Bot</h1>
         
         <div class="game-container">
-            <!-- Bàn cờ -->
             <div id="myBoard" style="width: 400px; max-width: 100%;"></div>
 
-            <!-- Bảng điều khiển -->
             <div class="controls">
                 <h3>Bảng Điều Khiển</h3>
                 <div class="status-box">
-                    <p>Trạng thái: <span id="status">Lượt của bạn (Trắng)</span></p>
+                    <p id="status">Lượt của bạn (Trắng)</p>
                 </div>
                 
                 <div class="setting-group">
-                    <label for="difficulty">Độ khó (Depth):</label>
+                    <label for="difficulty">Độ khó (Level):</label>
                     <select id="difficulty">
-                        <option value="2">Dễ (Depth 2)</option>
-                        <option value="5" selected>Trung bình (Depth 5)</option>
-                        <option value="10">Khó (Depth 10)</option>
-                        <option value="15">Siêu khó (Depth 15)</option>
+                        <option value="1">Dễ (Level 1)</option>
+                        <option value="3" selected>Trung bình (Level 3)</option>
+                        <option value="5">Khó (Level 5)</option>
                     </select>
                 </div>
 
@@ -41,12 +37,9 @@
         </div>
     </div>
 
-    <!-- Tải các thư viện bổ trợ từ CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
-    <!-- File xử lý logic -->
-    <script src="stockfish.js"></script>
     <script src="script.js"></script>
 </body>
-    </html>
+</html>
