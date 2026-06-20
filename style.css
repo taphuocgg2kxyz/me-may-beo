@@ -41,7 +41,6 @@ h1 {
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
-/* Custom lại viền bàn cờ cho đẹp */
 #myBoard {
     border: 4px solid #3d3d4d;
     border-radius: 6px;
@@ -66,11 +65,18 @@ h1 {
 
 .status-box {
     background: #1e1e24;
-    padding: 10px 15px;
+    padding: 15px;
     border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 20px;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+}
+
+.status-box p {
+    margin: 0;
 }
 
 .setting-group {
@@ -86,6 +92,7 @@ select {
     border: 1px solid #3d3d4d;
     border-radius: 6px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .btn {
@@ -99,6 +106,7 @@ select {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s;
+    box-sizing: border-box;
 }
 
 .btn:hover {
@@ -106,15 +114,14 @@ select {
 }
 
 .hint-btn {
-    background-color: #ff9800; /* Màu cam nổi bật cho nút Hint */
+    background-color: #ff9800;
 }
 
 .hint-btn:hover {
     background-color: #e68a00;
 }
 
-/* Hiệu ứng đổ màu vàng lên ô cờ khi nhận được gợi ý */
 .highlight-hint {
     box-shadow: inset 0 0 3px 3px yellow;
     background-color: rgba(255, 255, 0, 0.4) !important;
-  }
+}
